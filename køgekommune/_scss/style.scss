@@ -1,0 +1,858 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  color: #000;
+  width: 100%;
+  height: 100%;
+  	-webkit-font-smoothing: antialiased;
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+
+  font-family: "Verdana", sans-serif;
+}
+
+.container {
+  display: grid;
+
+  grid-template-areas:
+    "header"
+    "nav"
+    "content"
+    "footer";
+
+    grid-template-columns: auto;
+    grid-template-rows: 100px 40px auto auto;
+
+    height: 100vh;
+
+    header {
+      grid-area: header;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+
+      img.logo {
+        margin: 0 18px;
+        width: 30px;
+      }
+
+      h5 {
+        font-size: 13px;
+      }
+
+      input {
+        border: 1px solid #ccc;
+        font-size: 12px;
+        height: 30px;
+        padding: 4px 8px;
+        position: absolute;
+        width: 50%;
+        &:focus {
+          outline: none;
+        }
+      }
+
+      button {
+        text-align: center;
+        &:focus {
+          outline: none;
+        }
+
+        &.btn-search,
+        &.btn-reset {
+          border: none;
+          height: 30px;
+          font-size: 12px;
+          padding: 4px;
+          position: absolute;
+          width: 30px;
+          color: white;
+        }
+      }
+
+      .search {
+        float: left;
+        height: 30px;
+        margin: 0 8%;
+        position: relative;
+        width: 34%;
+
+
+          input {
+            border-radius: 15px;
+            right: 0;
+            transition: all .3s ease-in-out;
+            width: 49%;
+
+            &:focus {
+              width: 100%;
+              ~ button {
+                &.btn-search {
+                  background: #FFA500;
+                  color: white;
+                }
+
+                &.btn-reset {
+                  right: -22px;
+                  color: black;
+                }
+              }
+            }
+          }
+
+          button {
+            transition: all .3s ease-in-out;
+
+            &.btn-search {
+              background: #3B5998;
+              border-radius: 50%;
+              height: 26px;
+              right: 2px;
+              top: 2px;
+              transition: all .3s ease-in-out;
+              width: 26px;
+            }
+            &.btn-reset {
+              background: #fff;
+              border: 1px solid #3B5998;
+              border-radius: 50%;
+              font-size: 10px;
+              height: 20px;
+              line-height: 20px;
+              padding: 0;
+              right: 5px;
+              top: 5px;
+              width: 20px;
+              z-index: -1;
+            }
+          }
+        }
+      }
+
+    nav {
+      grid-area: nav;
+      border-top: 1px solid #3b5998;
+      font-size: 8pt;
+      background-color: #3b5998;
+
+      ul {
+        list-style: none;
+        padding-bottom: 15px;
+        padding-left: 0;
+        text-align: center;
+
+        li {
+          display: inline;
+          padding-right: 12px;
+          padding-left: 12px;
+          padding-bottom: 15px;
+          color: white;
+
+          &:hover {
+            color: #FFA500;
+          }
+        }
+
+        li.active {
+          border-right: 1px solid #3b5998;
+          border-left: 1px solid #3b5998;
+          padding-top: 11px;
+          border-bottom: 1px solid #fff;
+          color: #FFA500;
+          background-color: white;
+        }
+      }
+    }
+
+    main {
+      grid-area: content;
+
+      div.menu {
+        margin-left: 15px;
+        margin-top: 35px;
+        margin-bottom: 0px;
+
+        a.menu-link {
+          color: black;
+        }
+      }
+
+      .digitalpost-header {
+        margin-top: 50px;
+        margin-left: 20px;
+        margin-right: 20px;
+      }
+
+      .digitalpost-luft {
+        margin-right: 35px;
+        margin-left: 35px;
+      }
+
+      i.fa-user-circle {
+        margin-left: 50px;
+        margin-top: 50px;
+        display: inline-block;
+        vertical-align: top;
+        color: #3b5998;
+      }
+
+      .subject {
+        width: 220px;
+        margin-left: -10px;
+        margin-top: 64px;
+        font-size: 17px;
+        display: inline-block;
+        text-decoration: none;
+        color: black;
+
+          &:hover {
+            color: #FFA500;
+          }
+        }
+
+      .first {
+        font-size: 15px;
+        margin-left: 112px;
+        display: inline-block;
+        margin-right: 5px;
+
+        &:hover {
+          color: #FFA500;
+        }
+      }
+
+      .break {
+        display: inline-block;
+        font-size: 12px;
+        margin-right: 5px;
+      }
+
+      .second {
+        display: inline-block;
+        font-size: 15px;
+        margin-right: 5px;
+
+        &:hover {
+          color: #FFA500;
+        }
+      }
+
+      .seflere {
+        display: inline-block;
+        margin-left: 112px;
+        font-size: 15px;
+        text-decoration: underline;
+
+        &:hover {
+          color: #FFA500;
+        }
+      }
+
+      i.fa-coins {
+        margin-left: 50px;
+        margin-top: 50px;
+        display: inline-block;
+        vertical-align: top;
+        color: #3b5998;
+      }
+
+      .third {
+        display: inline-block;
+        font-size: 15px;
+        margin-right: 5px;
+
+        &:hover {
+          color: #FFA500;
+        }
+      }
+
+      i.fa-medkit {
+        margin-left: 50px;
+        margin-top: 50px;
+        display: inline-block;
+        vertical-align: top;
+        color: #3b5998;
+      }
+
+      .nextline-first {
+        display: inline-block;
+        margin-left: 112px;
+        font-size: 15px;
+        margin-right: 5px;
+
+        &:hover {
+          color: #FFA500;
+        }
+      }
+
+      .seflere-ekstra {
+        display: inline;
+        margin-right: 5px;
+        font-size: 15px;
+        text-decoration: underline;
+
+        &:hover {
+          color: #FFA500;
+        }
+      }
+
+      i.fa-plane {
+        margin-left: 50px;
+        margin-top: 50px;
+        display: inline-block;
+        vertical-align: top;
+        color: #3b5998;
+      }
+
+      .nextline-second {
+        display: inline;
+        margin-right: 5px;
+        font-size: 15px;
+
+        &:hover {
+          color: #FFA500;
+        }
+      }
+
+      i.fa-briefcase {
+        margin-left: 50px;
+        margin-top: 50px;
+        display: inline-block;
+        vertical-align: top;
+        color: #3b5998;
+      }
+
+      i.fa-home {
+        margin-left: 50px;
+        margin-top: 50px;
+        display: inline-block;
+        vertical-align: top;
+        color: #3b5998;
+      }
+
+      div.boligdiv {
+        padding-bottom: 30px;
+      }
+
+      .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        transition: .5s ease;
+        z-index: -1;
+        }
+
+      .overlay.active {
+        opacity: 1;
+        z-index: 2;
+        }
+
+        .modal {
+        max-height: calc(100% - 100px);
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        max-width: 450px;
+        transform: translate(-50%, -50%);
+        color: #4a5666;
+        background: linear-gradient(to bottom right, white, #F8F8F8) !important;
+        box-shadow: 0 15px 20px -15px rgba(0, 0, 0, 0.3), 0 35px 50px -25px rgba(0, 0, 0, 0.3), 0 85px 60px -25px rgba(0, 0, 0, 0.1);
+        z-index: 3;
+        visibility: hidden;
+        opacity: 0;
+        transition: .5s ease;
+        text-align: center;
+        }
+
+        .modal h2 {
+        margin: 0;
+        font-weight: 400;
+        padding: 1rem;
+        border-bottom: 1px solid #DDE0E7;
+        }
+
+        .modal p {
+        padding: 1rem;
+        text-align: center;
+        text-decoration: underline;
+        }
+
+        .modal.active {
+        visibility: visible;
+        opacity: 1;
+        border-radius: 5px;
+        }
+
+        button {
+        display: inline-block;
+        background-color: #3B5998;
+        border: 1px solid transparent;
+        color: white;
+        text-decoration: none;
+        font-size: 1.2rem;
+        padding: 1rem 2rem;
+        border-radius: 45px;
+        margin-left: 91px;
+        margin-bottom: 40px;
+        line-height: 1;
+        overflow: visible;
+        white-space: nowrap;
+        cursor: pointer;
+          &:hover {
+            border: 1px solid #FFA500;
+            color: #FFA500;
+            background: transparent;
+          }
+        }
+
+        button.close {
+        margin: 0 0 1rem;
+        background: #3B5998;
+          &:hover {
+          border: 1px solid #FFA500;
+          color: #FFA500;
+          background: transparent;
+        }
+      }
+
+      li.nyheder {
+        font-size: 15px;
+        margin-left: 8px;
+        margin-right: 8px;
+        padding-left: 35px;
+        padding-right: 35px;
+      }
+
+      div.text {
+        text-align: center;
+        padding-top: 10px;
+        padding-bottom: 40px;
+        border-bottom: 1px solid #3b5998;
+      }
+
+      div.padding {
+        padding-bottom: 50px;
+      }
+
+      div.hjemmesider {
+        background-color: #3b5998;
+      }
+
+      .fas {
+        color: #3b5998;
+        display: inline-block;
+        margin-top: 50px;
+        margin-left: 70px;
+        margin-right: 20px;
+      }
+
+      a.text {
+        color: black;
+        font-size: 20px;
+      }
+
+      .text{
+        p {
+          padding-left: 30px;
+          margin-right: 30px;
+        }
+      }
+
+      div.flere-opslag {
+        text-align: center;
+        text-decoration: underline;
+
+        &:hover {
+          color: #FFA500;
+        }
+      }
+
+      img.news-pic {
+        width: 300px;
+        border-radius: 10px;
+      }
+
+      iframe {
+        width: 280px;
+        border: none;
+        overflow: hidden;
+        border-radius: 10px;
+      }
+
+      .læsmere {
+        color: black;
+
+        &:hover {
+          color: #FFA500;
+        }
+      }
+
+      img.icons {
+        width: 50px;
+        margin: 0;
+      }
+
+      figure {
+        display: inline-block;
+        margin: 18.8px;
+      }
+
+      figcaption {
+        color: white;
+        font-size: 13px;
+        text-align: center;
+        margin-top: 5px;
+      }
+
+      .digitalpost-header {
+        text-align: center;
+      }
+    }
+
+    footer {
+      grid-area: footer;
+      font-size: 11px;
+
+      > div {
+        display: inline-block;
+        vertical-align: top;
+        margin-left: 40px;
+        margin-top: 20px;
+      }
+
+      div.tider {
+        margin-left: 55px;
+      }
+
+      div.genveje {
+        margin-left: 0px;
+      }
+
+      div > i.fa-facebook {
+        color: #3B5998;
+        margin-right: 8px;
+        margin-bottom: 20px;
+      }
+
+      div > i.fa-linkedin {
+        color: #0077B5;
+        margin-bottom: 20px;
+        margin-left: 8px;
+      }
+    }
+  }
+
+@media screen and (min-width: 1024px) {
+
+  .container {
+    header {
+
+      h5 {
+        font-size: 18px;
+        margin-right: 325px;
+      }
+
+      div.search {
+        margin-right: 40px;
+        margin-top: 140px;
+        z-index: 1;
+      }
+
+      input {
+        width: 60%;
+      }
+    }
+
+    nav {
+      border-bottom: 1px solid #3b5998;
+
+      ul {
+        float: left;
+
+        li {
+          margin-left: 10px;
+        }
+      }
+    }
+
+    nav.fbnews {
+      border-top: none;
+      border-top: 1px solid #3b5998;
+
+      ul {
+        float: none;
+        border-bottom: none;
+        margin-bottom: 0;
+      }
+    }
+
+    main {
+
+      iframe {
+        width: 495px;
+        height: 275px;
+      }
+
+      div.selvbetjeningsdiv {
+        width: 333px;
+        display: inline-block;
+        vertical-align: top;
+      }
+
+      div.økonomidiv{
+        width: 334px;
+        display: inline-block;
+        vertical-align: top;
+        margin-left: -35px;
+      }
+
+      div.sundhedsdiv{
+        width: 352px;
+        display: inline-block;
+        vertical-align: top;
+        margin-left: -20px;
+      }
+
+      div.transportsdiv {
+        width: 346px;
+        display: inline-block;
+        vertical-align: top;
+        margin-left: -10px;
+      }
+
+      div.arbejdediv {
+        width: 338px;
+        display: inline-block;
+        vertical-align: top;
+        margin-left: -40px;
+      }
+
+      div.boligdiv {
+        width: 340px;
+        display: inline-block;
+        vertical-align: top;
+        margin-left: -27px;
+      }
+
+      button {
+        margin-left: 410px;
+      }
+
+      .modal.active {
+        width: 500px;
+      }
+
+      div.inline {
+        display: inline-block;
+        vertical-align: top;
+      }
+
+      div.nemid {
+        margin-left: 65px;
+      }
+
+      div.blanketter  {
+        margin-left: 140px;
+      }
+
+      div.familie {
+        margin-left: 30px;
+      }
+
+      div.flytning {
+        margin-left: -15px;
+      }
+
+      div.rejser {
+        margin-left: -20px;
+      }
+
+      div.padding {
+        margin-left: -8px;
+      }
+
+      img.icons {
+        width: 70px;
+      }
+
+      figure {
+        margin-left: 135px;
+      }
+
+      figcaption {
+        font-size: 16px;
+      }
+    }
+
+    footer {
+      div > i.fa-facebook {
+        color: #3b5998;
+        margin-bottom: 20px;
+      }
+
+      div.luft {
+        margin-left: 64px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1439px) {
+
+  .container {
+    header {
+
+      h5 {
+        font-size: 21px;
+        margin-right: 535px;
+      }
+
+      div.search {
+        margin-right: 40px;
+      }
+    }
+
+    main {
+      div.selvbetjeningsdiv {
+        margin-left: 130px;
+        width: 333px;
+      }
+
+      div.økonomidiv {
+        margin-left: 60px;
+        margin-right: 30px;
+        width: 334px;
+      }
+
+      div.sundhedsdiv {
+        width: 352px;
+      }
+
+      div.transportsdiv {
+        margin-left: 130px;
+        width: 364px;
+      }
+
+      div.arbejdediv {
+        margin-left: 28px;
+        width: 338px;
+      }
+
+      div.boligdiv {
+        padding-bottom: 55px;
+        margin-left: 5px;
+        width: 340px;
+      }
+
+      div.digital {
+        margin-left: 130px;
+      }
+
+      div.nemid {
+        margin-left: 165px;
+      }
+
+      div.blanketter {
+        margin-left: 180px;
+      }
+
+      div.bolig {
+        margin-left: 130px;
+      }
+
+      button {
+        margin-left: 618px;
+      }
+
+      div.familie {
+        margin-left: 125px;
+      }
+
+      div.flytning {
+        margin-left: 30px;
+      }
+
+      div.gæld {
+        margin-left: 130px;
+      }
+
+      div.rejser {
+        margin-left: 70px;
+      }
+
+      div.padding {
+        margin-left: 43px;
+      }
+
+      figure {
+        margin-left: 220px;
+      }
+    }
+
+    footer {
+      > div.luft {
+        margin-left: 130px;
+      }
+    }
+  }
+}
+
+// @media screen and (min-width: 1200px) {
+//   .container {
+//
+//     header {
+//       div.search {
+//       margin-left: 1050px;
+//       }
+//     }
+//
+//     main {
+//       div.selvbetjeningsdiv {
+//         margin-left: 60px;
+//       }
+//
+//       div.økonomidiv {
+//         margin-left: 135px;
+//       }
+//
+//       div.sundhedsdiv {
+//         margin-left: 100px;
+//       }
+//
+//       div.transportsdiv {
+//         margin-left: 60px;
+//       }
+//
+//       div.arbejdediv {
+//         margin-left: 125px;
+//       }
+//
+//       div.boligdiv {
+//         margin-left: 125px;
+//       }
+//
+//       figure {
+//         margin-left: 215px;
+//       }
+//     }
+//
+//     footer {
+//       div.luft {
+//         margin-left: 145px;
+//       }
+//     }
+//   }
+// }

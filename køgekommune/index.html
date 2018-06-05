@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+  <head>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109483701-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-109483701-1');
+    </script>
+
+    <meta charset="utf-8">
+    <meta name="robots" content="nofollow" />
+    <meta name="robots" content="noindex">
+    <meta name="googlebot" content="noindex">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Køge Kommune</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        // Når man klikker på "open" åbnes modalet.
+        $(".open").on("click", function(){
+          $(".overlay, .modal").addClass("active");
+        });
+
+        // Når man klikker på "close" lukker modalet.
+        $(".close, .overlay").on("click", function(){
+           $(".overlay, .modal").removeClass("active");
+        });
+
+        // Når man trykker "esc" knappen, så lukker modalet.
+        $(document).keyup(function(e) {
+          if (e.keyCode === 27) {
+            $(".overlay, .modal").removeClass("active");
+          }
+        });
+      });
+    </script>
+  </head>
+
+  <body>
+    <div class="container">
+      <header>
+        <!-- Header Content -->
+        <a href="index.html"><img class="logo" src="img/logo.png"></a>
+        <h5>Køge Kommune</h5>
+        <div class="search">
+          <input type="text" name="search" placeholder="Søg">
+          <button type="submit" class="btn btn-search fa fa-search"></button>
+          <button type="reset" class="btn btn-reset fa fa-times"></button>
+        </div>
+      </header>
+
+      <nav>
+        <ul>
+          <li class="active">BORGER</li>
+          <li>ERHVERV</li>
+          <li>OM KOMMUNEN</li>
+          <li>POLITIK</li>
+        </ul>
+      </nav>
+
+      <main>
+        <div class="selvbetjeningsdiv">
+          <i class="fas fa-user-circle fa-3x"></i>
+          <a href="obligatoriskselvbetjening.html" class="subject"><strong>Obligatorisk selvbetjening</strong></a>
+          <p class="first">Digital post</p>
+          <p class="break">|</p>
+          <p class="second">NemID</p>
+          <p class="break">|</p>
+          <p class="seflere">Se flere</p>
+        </div>
+
+        <div class="økonomidiv">
+          <i class="fas fa-coins fa-3x"></i>
+          <p class="subject"><strong>Økonomi og afgifter</strong></p>
+          <p class="first">Skat</p>
+          <p class="break">|</p>
+          <p class="second">SU</p>
+          <p class="break">|</p>
+          <p class="third">NemKonto</p>
+          <p class="break">|</p>
+          <p class="seflere">Se flere</p>
+        </div>
+
+        <div class="sundhedsdiv">
+          <i class="fas fa-medkit fa-3x"></i>
+          <p class="subject"><strong>Sundhed og sygdom</strong></p>
+          <p class="first">Sygesikring</p>
+          <p class="break">|</p>
+          <p class="second">Sundhedskort</p>
+          <p class="break">|</p>
+          <p class="nextline-first">Sundhedspolitik</p>
+          <p class="break">|</p>
+          <p class="seflere-ekstra">Se flere</p>
+        </div>
+
+        <div class="transportsdiv">
+          <i class="fas fa-plane fa-3x"></i>
+          <p class="subject"><strong>Transport og rejse</strong></p>
+          <p class="first">Kørekort</p>
+          <p class="break">|</p>
+          <p class="second">Traffiksikkerhed</p>
+          <p class="break">|</p>
+          <p class="nextline-first">Pas</p>
+          <p class="break">|</p>
+          <p class="nextline-second">Parkering</p>
+          <p class="break">|</p>
+          <p class="seflere-ekstra">Se flere</p>
+        </div>
+
+        <div class="arbejdediv">
+          <i class="fas fa-briefcase fa-3x"></i>
+          <p class="subject"><strong>Arbejde og ledighed</strong></p>
+          <p class="first">Kontanthjælp</p>
+          <p class="break">|</p>
+          <p class="second">Dagpenge</p>
+          <p class="break">|</p>
+          <p class="nextline-first">Sygemeldt</p>
+          <p class="break">|</p>
+          <p class="seflere-ekstra">Se flere</p>
+        </div>
+
+        <div class="boligdiv">
+          <i class="fas fa-home fa-3x"></i>
+          <p class="subject"><strong>Bolig og flytning</strong></p>
+          <p class="first">Meld din flytning</p>
+          <p class="break">|</p>
+          <p class="second">BBR</p>
+          <p class="break">|</p>
+          <p class="nextline-first">Byggetilladelse</p>
+          <p class="break">|</p>
+          <p class="seflere-ekstra">Se flere</p>
+        </div>
+
+        <div class="overlay">
+        </div>
+        <div class="modal">
+          <h4>Brug for hjælp?</h4>
+          <p>Skal du flytte?</p>
+          <p>Skal du bestille NemID?</p>
+          <p>Skal du have nyt pas?</p>
+          <p>Skal du have SU?</p>
+    	    <button class="close">Close</button>
+        </div>
+
+      <button class="open">Brug for hjælp?</button>
+
+        <nav class="fbnews">
+          <ul>
+            <li class="active nyheder">FACEBOOK</li>
+            <li class="nyheder">NYHEDER</li>
+          </ul>
+        </nav>
+
+        <div class="text">
+          <h4>29. maj 2018</h4>
+          <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fkoegekommune%2Fphotos%2Fa.645669545539983.1073741829.627851687321769%2F1663832760390318%2F%3Ftype%3D3&width=500" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+          <p>Regnen skyller forbud imod afbrænding væk
+            <br/>
+            - men du skal stadig bruge din sunde fornuft!
+            <br/>
+            <br/>
+            I fredags blev der nedlagt forbud mod brug af åben ild på en række områder.
+            <br/><br/>
+
+            <a class="læsmere" href="https://www.facebook.com/koegekommune/">Læs mere</a>
+        </div>
+
+        <br/>
+
+        <div class="text">
+          <h4>29. maj 2018</h4>
+          <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fkoegekommune%2Fvideos%2F1662942077146053%2F&show_text=0&width=560" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
+          <p>Sådan her ser det ud, når 400 SFO-unger er samlet til actiondag i Ejby SFO.
+          <br/><br/>
+          Actiondagen løb af stablen i forbindelse med ’SFO PÅ TVÆRS’, som samler alle børn fra kommunens SFO’er til aktiviteter i løbet af året.</p>
+
+          <a class="læsmere" href="https://www.facebook.com/koegekommune/">Læs mere</a>
+        </div>
+
+        <div class="text">
+          <h4>25. maj 2018</h4>
+          <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fkoegekommune%2Fphotos%2Fa.645669545539983.1073741829.627851687321769%2F1659978400775754%2F%3Ftype%3D3&width=500" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+          <p>FRIVILLIGE I FOKUS
+            <br/><br/>
+            Det er sundt at gøre noget andet end man plejer.
+            Derfor var det også en stor succes, da medarbejdere fra den
+            lokale Køge-virksomhed Omron Electronic rev en dag ud af kalenderen
+            for at bruge den sammen med beboere på Køge Kommunes bosted Pedersvænge
+            og aktivitetscenteret Blumesvej, som er for borgere med fysisk og kognitiv
+            funktionsnedsættelse.</p>
+
+            <a class="læsmere" href="https://www.facebook.com/koegekommune/">Læs mere</a>
+            <br/><br/><br/>
+            <div class="flere-opslag">Se flere Facebook-opslag</div>
+        </div>
+
+        <div class="hjemmesider">
+          <br/>
+          <br/>
+          <div class="circle">
+            <figure>
+              <img class="icons" src="img/skat.png">
+              <figcaption>Skat</figcaption>
+            </figure>
+
+            <figure>
+              <img class="icons" src="img/jobnet.png">
+              <figcaption>Jobnet</figcaption>
+            </figure>
+
+            <figure>
+              <img class="icons" src="img/borger.png">
+              <figcaption>Borger</figcaption>
+            </figure>
+
+            <figure>
+              <img class="icons" src="img/sundhed.png">
+              <figcaption>Sundhed</figcaption>
+            </figure>
+          </div>
+          <br/>
+          <br/>
+        </div>
+      </main>
+
+      <footer>
+        <div class="luft">
+          <p><strong>Køge Kommune</strong></p>
+          <p>Torvet 1</p>
+          <p>4600 Køge</p>
+          <p>raadhus@koege.dk</p>
+          <p>CVR-nr. 2918937</p>
+          <p>Akut hjælp</p>
+        </div>
+
+        <div class="tider luft">
+          <p><strong>Åbnings- og telefontider</strong>
+          <p>Mandag: kl. 9.00 - 14.00</p>
+          <p>Tirsdag: kl. 9.00 - 14.00</p>
+          <p>Onsdag: kl. 9.00 - 14.00</p>
+          <p>Torsdag: kl. 12.00 - 18.00</p>
+          <p>Fredag: kl. 9.00 - 13.00</p>
+        </div>
+
+        <div class="luft">
+          <p><strong>Oversigt og værktøjer</strong></p>
+          <p>Sitemap</p>
+          <p>Translate</p>
+          <p>Få teksten læst op</p>
+          <p>Abonnement</p>
+          <p>Kort over kommunen</p>
+          <p>Log på Kjukken (for ansatte)</p>
+        </div>
+
+        <div class="genveje luft">
+          <p><strong>Genveje</strong>
+          <p>Job hos os</p>
+          <p>Book en tid til pas</p>
+          <p>Budget 2018-2021</p>
+          <p>Høringer og afgørelser</p>
+        </div>
+
+        <div class="luft">
+          <p><strong>Sociale medier</strong>
+          <div>
+            <i class="fab fa-facebook fa-3x" href="https://www.facebook.com/koegekommune/"></i>
+            <i class="fab fa-linkedin fa-3x" href="https://www.linkedin.com/company/koge-kommune"></i>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

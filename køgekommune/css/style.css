@@ -1,0 +1,516 @@
+@charset "UTF-8";
+* {
+  box-sizing: border-box; }
+
+html {
+  color: #000;
+  width: 100%;
+  height: 100%;
+  -webkit-font-smoothing: antialiased; }
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: "Verdana", sans-serif; }
+
+.container {
+  display: grid;
+  grid-template-areas: "header" "nav" "content" "footer";
+  grid-template-columns: auto;
+  grid-template-rows: 100px 40px auto auto;
+  height: 100vh; }
+  .container header {
+    grid-area: header;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center; }
+    .container header img.logo {
+      margin: 0 18px;
+      width: 30px; }
+    .container header h5 {
+      font-size: 13px; }
+    .container header input {
+      border: 1px solid #ccc;
+      font-size: 12px;
+      height: 30px;
+      padding: 4px 8px;
+      position: absolute;
+      width: 50%; }
+      .container header input:focus {
+        outline: none; }
+    .container header button {
+      text-align: center; }
+      .container header button:focus {
+        outline: none; }
+      .container header button.btn-search, .container header button.btn-reset {
+        border: none;
+        height: 30px;
+        font-size: 12px;
+        padding: 4px;
+        position: absolute;
+        width: 30px;
+        color: white; }
+    .container header .search {
+      float: left;
+      height: 30px;
+      margin: 0 8%;
+      position: relative;
+      width: 34%; }
+      .container header .search input {
+        border-radius: 15px;
+        right: 0;
+        transition: all .3s ease-in-out;
+        width: 49%; }
+        .container header .search input:focus {
+          width: 100%; }
+          .container header .search input:focus ~ button.btn-search {
+            background: #FFA500;
+            color: white; }
+          .container header .search input:focus ~ button.btn-reset {
+            right: -22px;
+            color: black; }
+      .container header .search button {
+        transition: all .3s ease-in-out; }
+        .container header .search button.btn-search {
+          background: #3B5998;
+          border-radius: 50%;
+          height: 26px;
+          right: 2px;
+          top: 2px;
+          transition: all .3s ease-in-out;
+          width: 26px; }
+        .container header .search button.btn-reset {
+          background: #fff;
+          border: 1px solid #3B5998;
+          border-radius: 50%;
+          font-size: 10px;
+          height: 20px;
+          line-height: 20px;
+          padding: 0;
+          right: 5px;
+          top: 5px;
+          width: 20px;
+          z-index: -1; }
+  .container nav {
+    grid-area: nav;
+    border-top: 1px solid #3b5998;
+    font-size: 8pt;
+    background-color: #3b5998; }
+    .container nav ul {
+      list-style: none;
+      padding-bottom: 15px;
+      padding-left: 0;
+      text-align: center; }
+      .container nav ul li {
+        display: inline;
+        padding-right: 12px;
+        padding-left: 12px;
+        padding-bottom: 15px;
+        color: white; }
+        .container nav ul li:hover {
+          color: #FFA500; }
+      .container nav ul li.active {
+        border-right: 1px solid #3b5998;
+        border-left: 1px solid #3b5998;
+        padding-top: 11px;
+        border-bottom: 1px solid #fff;
+        color: #FFA500;
+        background-color: white; }
+  .container main {
+    grid-area: content; }
+    .container main div.menu {
+      margin-left: 15px;
+      margin-top: 35px;
+      margin-bottom: 0px; }
+      .container main div.menu a.menu-link {
+        color: black; }
+    .container main .digitalpost-header {
+      margin-top: 50px;
+      margin-left: 20px;
+      margin-right: 20px; }
+    .container main .digitalpost-luft {
+      margin-right: 35px;
+      margin-left: 35px; }
+    .container main i.fa-user-circle {
+      margin-left: 50px;
+      margin-top: 50px;
+      display: inline-block;
+      vertical-align: top;
+      color: #3b5998; }
+    .container main .subject {
+      width: 220px;
+      margin-left: -10px;
+      margin-top: 64px;
+      font-size: 17px;
+      display: inline-block;
+      text-decoration: none;
+      color: black; }
+      .container main .subject:hover {
+        color: #FFA500; }
+    .container main .first {
+      font-size: 15px;
+      margin-left: 112px;
+      display: inline-block;
+      margin-right: 5px; }
+      .container main .first:hover {
+        color: #FFA500; }
+    .container main .break {
+      display: inline-block;
+      font-size: 12px;
+      margin-right: 5px; }
+    .container main .second {
+      display: inline-block;
+      font-size: 15px;
+      margin-right: 5px; }
+      .container main .second:hover {
+        color: #FFA500; }
+    .container main .seflere {
+      display: inline-block;
+      margin-left: 112px;
+      font-size: 15px;
+      text-decoration: underline; }
+      .container main .seflere:hover {
+        color: #FFA500; }
+    .container main i.fa-coins {
+      margin-left: 50px;
+      margin-top: 50px;
+      display: inline-block;
+      vertical-align: top;
+      color: #3b5998; }
+    .container main .third {
+      display: inline-block;
+      font-size: 15px;
+      margin-right: 5px; }
+      .container main .third:hover {
+        color: #FFA500; }
+    .container main i.fa-medkit {
+      margin-left: 50px;
+      margin-top: 50px;
+      display: inline-block;
+      vertical-align: top;
+      color: #3b5998; }
+    .container main .nextline-first {
+      display: inline-block;
+      margin-left: 112px;
+      font-size: 15px;
+      margin-right: 5px; }
+      .container main .nextline-first:hover {
+        color: #FFA500; }
+    .container main .seflere-ekstra {
+      display: inline;
+      margin-right: 5px;
+      font-size: 15px;
+      text-decoration: underline; }
+      .container main .seflere-ekstra:hover {
+        color: #FFA500; }
+    .container main i.fa-plane {
+      margin-left: 50px;
+      margin-top: 50px;
+      display: inline-block;
+      vertical-align: top;
+      color: #3b5998; }
+    .container main .nextline-second {
+      display: inline;
+      margin-right: 5px;
+      font-size: 15px; }
+      .container main .nextline-second:hover {
+        color: #FFA500; }
+    .container main i.fa-briefcase {
+      margin-left: 50px;
+      margin-top: 50px;
+      display: inline-block;
+      vertical-align: top;
+      color: #3b5998; }
+    .container main i.fa-home {
+      margin-left: 50px;
+      margin-top: 50px;
+      display: inline-block;
+      vertical-align: top;
+      color: #3b5998; }
+    .container main div.boligdiv {
+      padding-bottom: 30px; }
+    .container main .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      opacity: 0;
+      transition: .5s ease;
+      z-index: -1; }
+    .container main .overlay.active {
+      opacity: 1;
+      z-index: 2; }
+    .container main .modal {
+      max-height: calc(100% - 100px);
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      max-width: 450px;
+      transform: translate(-50%, -50%);
+      color: #4a5666;
+      background: linear-gradient(to bottom right, white, #F8F8F8) !important;
+      box-shadow: 0 15px 20px -15px rgba(0, 0, 0, 0.3), 0 35px 50px -25px rgba(0, 0, 0, 0.3), 0 85px 60px -25px rgba(0, 0, 0, 0.1);
+      z-index: 3;
+      visibility: hidden;
+      opacity: 0;
+      transition: .5s ease;
+      text-align: center; }
+    .container main .modal h2 {
+      margin: 0;
+      font-weight: 400;
+      padding: 1rem;
+      border-bottom: 1px solid #DDE0E7; }
+    .container main .modal p {
+      padding: 1rem;
+      text-align: center;
+      text-decoration: underline; }
+    .container main .modal.active {
+      visibility: visible;
+      opacity: 1;
+      border-radius: 5px; }
+    .container main button {
+      display: inline-block;
+      background-color: #3B5998;
+      border: 1px solid transparent;
+      color: white;
+      text-decoration: none;
+      font-size: 1.2rem;
+      padding: 1rem 2rem;
+      border-radius: 45px;
+      margin-left: 91px;
+      margin-bottom: 40px;
+      line-height: 1;
+      overflow: visible;
+      white-space: nowrap;
+      cursor: pointer; }
+      .container main button:hover {
+        border: 1px solid #FFA500;
+        color: #FFA500;
+        background: transparent; }
+    .container main button.close {
+      margin: 0 0 1rem;
+      background: #3B5998; }
+      .container main button.close:hover {
+        border: 1px solid #FFA500;
+        color: #FFA500;
+        background: transparent; }
+    .container main li.nyheder {
+      font-size: 15px;
+      margin-left: 8px;
+      margin-right: 8px;
+      padding-left: 35px;
+      padding-right: 35px; }
+    .container main div.text {
+      text-align: center;
+      padding-top: 10px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid #3b5998; }
+    .container main div.padding {
+      padding-bottom: 50px; }
+    .container main div.hjemmesider {
+      background-color: #3b5998; }
+    .container main .fas {
+      color: #3b5998;
+      display: inline-block;
+      margin-top: 50px;
+      margin-left: 70px;
+      margin-right: 20px; }
+    .container main a.text {
+      color: black;
+      font-size: 20px; }
+    .container main .text p {
+      padding-left: 30px;
+      margin-right: 30px; }
+    .container main div.flere-opslag {
+      text-align: center;
+      text-decoration: underline; }
+      .container main div.flere-opslag:hover {
+        color: #FFA500; }
+    .container main img.news-pic {
+      width: 300px;
+      border-radius: 10px; }
+    .container main iframe {
+      width: 280px;
+      border: none;
+      overflow: hidden;
+      border-radius: 10px; }
+    .container main .læsmere {
+      color: black; }
+      .container main .læsmere:hover {
+        color: #FFA500; }
+    .container main img.icons {
+      width: 50px;
+      margin: 0; }
+    .container main figure {
+      display: inline-block;
+      margin: 18.8px; }
+    .container main figcaption {
+      color: white;
+      font-size: 13px;
+      text-align: center;
+      margin-top: 5px; }
+    .container main .digitalpost-header {
+      text-align: center; }
+  .container footer {
+    grid-area: footer;
+    font-size: 11px; }
+    .container footer > div {
+      display: inline-block;
+      vertical-align: top;
+      margin-left: 40px;
+      margin-top: 20px; }
+    .container footer div.tider {
+      margin-left: 55px; }
+    .container footer div.genveje {
+      margin-left: 0px; }
+    .container footer div > i.fa-facebook {
+      color: #3B5998;
+      margin-right: 8px;
+      margin-bottom: 20px; }
+    .container footer div > i.fa-linkedin {
+      color: #0077B5;
+      margin-bottom: 20px;
+      margin-left: 8px; }
+
+@media screen and (min-width: 1024px) {
+  .container header h5 {
+    font-size: 18px;
+    margin-right: 325px; }
+  .container header div.search {
+    margin-right: 40px;
+    margin-top: 140px;
+    z-index: 1; }
+  .container header input {
+    width: 60%; }
+  .container nav {
+    border-bottom: 1px solid #3b5998; }
+    .container nav ul {
+      float: left; }
+      .container nav ul li {
+        margin-left: 10px; }
+  .container nav.fbnews {
+    border-top: none;
+    border-top: 1px solid #3b5998; }
+    .container nav.fbnews ul {
+      float: none;
+      border-bottom: none;
+      margin-bottom: 0; }
+  .container main iframe {
+    width: 495px;
+    height: 275px; }
+  .container main div.selvbetjeningsdiv {
+    width: 333px;
+    display: inline-block;
+    vertical-align: top; }
+  .container main div.økonomidiv {
+    width: 334px;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: -35px; }
+  .container main div.sundhedsdiv {
+    width: 352px;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: -20px; }
+  .container main div.transportsdiv {
+    width: 346px;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: -10px; }
+  .container main div.arbejdediv {
+    width: 338px;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: -40px; }
+  .container main div.boligdiv {
+    width: 340px;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: -27px; }
+  .container main button {
+    margin-left: 410px; }
+  .container main .modal.active {
+    width: 500px; }
+  .container main div.inline {
+    display: inline-block;
+    vertical-align: top; }
+  .container main div.nemid {
+    margin-left: 65px; }
+  .container main div.blanketter {
+    margin-left: 140px; }
+  .container main div.familie {
+    margin-left: 30px; }
+  .container main div.flytning {
+    margin-left: -15px; }
+  .container main div.rejser {
+    margin-left: -20px; }
+  .container main div.padding {
+    margin-left: -8px; }
+  .container main img.icons {
+    width: 70px; }
+  .container main figure {
+    margin-left: 135px; }
+  .container main figcaption {
+    font-size: 16px; }
+  .container footer div > i.fa-facebook {
+    color: #3b5998;
+    margin-bottom: 20px; }
+  .container footer div.luft {
+    margin-left: 64px;
+    margin-bottom: 20px; } }
+@media screen and (min-width: 1439px) {
+  .container header h5 {
+    font-size: 21px;
+    margin-right: 535px; }
+  .container header div.search {
+    margin-right: 40px; }
+  .container main div.selvbetjeningsdiv {
+    margin-left: 130px;
+    width: 333px; }
+  .container main div.økonomidiv {
+    margin-left: 60px;
+    margin-right: 30px;
+    width: 334px; }
+  .container main div.sundhedsdiv {
+    width: 352px; }
+  .container main div.transportsdiv {
+    margin-left: 130px;
+    width: 364px; }
+  .container main div.arbejdediv {
+    margin-left: 28px;
+    width: 338px; }
+  .container main div.boligdiv {
+    padding-bottom: 55px;
+    margin-left: 5px;
+    width: 340px; }
+  .container main div.digital {
+    margin-left: 130px; }
+  .container main div.nemid {
+    margin-left: 165px; }
+  .container main div.blanketter {
+    margin-left: 180px; }
+  .container main div.bolig {
+    margin-left: 130px; }
+  .container main button {
+    margin-left: 618px; }
+  .container main div.familie {
+    margin-left: 125px; }
+  .container main div.flytning {
+    margin-left: 30px; }
+  .container main div.gæld {
+    margin-left: 130px; }
+  .container main div.rejser {
+    margin-left: 70px; }
+  .container main div.padding {
+    margin-left: 43px; }
+  .container main figure {
+    margin-left: 220px; }
+  .container footer > div.luft {
+    margin-left: 130px; } }
+
+/*# sourceMappingURL=style.css.map */
