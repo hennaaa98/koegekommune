@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <!-- GLOBAL SITE TAG (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109483701-1"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -11,28 +11,43 @@
       gtag('config', 'UA-109483701-1');
     </script>
 
+    <!-- CHARACTER SET -->
     <meta charset="utf-8">
+
+    <!-- MAKES THIS PAGE NOT SEARCHABLE -->
     <meta name="robots" content="nofollow" />
     <meta name="robots" content="noindex">
     <meta name="googlebot" content="noindex">
+
+    <!-- RESPONSIVE META TAG -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <!-- TITLE -->
     <title>Køge Kommune</title>
+
+    <!-- STYLE SHEET -->
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- FONT AWESOME ICONS -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+    <!-- JQUERY -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- TAKEN FROM https://codepen.io/taniarascia/pen/qRVRjy -->
     <script>
       $(document).ready(function(){
-        // Når man klikker på "open" åbnes modalet.
+        // WHEN YOU CLICK "open" THE MODAL OPENS.
         $(".open").on("click", function(){
           $(".overlay, .modal").addClass("active");
         });
 
-        // Når man klikker på "close" lukker modalet.
+        // WHEN YOU CLICK "close" THE MODAL CLOSES.
         $(".close, .overlay").on("click", function(){
            $(".overlay, .modal").removeClass("active");
         });
 
-        // Når man trykker "esc" knappen, så lukker modalet.
+        // WHEN YOU CLICK "esc" THE MODAL CLOSES.
         $(document).keyup(function(e) {
           if (e.keyCode === 27) {
             $(".overlay, .modal").removeClass("active");
@@ -45,9 +60,10 @@
   <body>
     <div class="container">
       <header>
-        <!-- Header Content -->
         <a href="index.html"><img class="logo" src="img/logo.png"></a>
         <h5>Køge Kommune</h5>
+
+        <!-- SEARCH BAR (from https://codepen.io/brandonkennedy/pen/yGjsi) -->
         <div class="search">
           <input type="text" name="search" placeholder="Søg">
           <button type="submit" class="btn btn-search fa fa-search"></button>
@@ -57,6 +73,7 @@
 
       <nav>
         <ul>
+          <!-- ACTIVE PAGE -->
           <li class="active">BORGER</li>
           <li>ERHVERV</li>
           <li>OM KOMMUNEN</li>
@@ -65,6 +82,7 @@
       </nav>
 
       <main>
+        <!-- MAIN CATEGORIES -->
         <div class="selvbetjeningsdiv">
           <i class="fas fa-user-circle fa-3x"></i>
           <a href="obligatoriskselvbetjening.html" class="subject"><strong>Obligatorisk selvbetjening</strong></a>
@@ -137,19 +155,25 @@
           <p class="seflere-ekstra">Se flere</p>
         </div>
 
+        <!-- "Brug for hjælp" BUTTON -->
         <div class="overlay">
         </div>
+        <!-- THE MODAL -->
         <div class="modal">
           <h4>Brug for hjælp?</h4>
           <p>Skal du flytte?</p>
           <p>Skal du bestille NemID?</p>
           <p>Skal du have nyt pas?</p>
           <p>Skal du have SU?</p>
+
+          <!-- "CLOSE" BUTTON -->
     	    <button class="close">Close</button>
         </div>
 
+      <!-- "OPEN" BUTTON -->
       <button class="open">Brug for hjælp?</button>
 
+        <!-- NEWS NAV -->
         <nav class="fbnews">
           <ul>
             <li class="active nyheder">FACEBOOK</li>
@@ -157,8 +181,11 @@
           </ul>
         </nav>
 
+        <!-- NEWS SECTION -->
         <div class="text">
           <h4>29. maj 2018</h4>
+
+          <!-- <IFRAME> EMBEDDED FROM FACEBOOK -->
           <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fkoegekommune%2Fphotos%2Fa.645669545539983.1073741829.627851687321769%2F1663832760390318%2F%3Ftype%3D3&width=500" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
           <p>Regnen skyller forbud imod afbrænding væk
             <br/>
@@ -175,6 +202,8 @@
 
         <div class="text">
           <h4>29. maj 2018</h4>
+
+          <!-- <IFRAME> EMBEDDED FROM FACEBOOK -->
           <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fkoegekommune%2Fvideos%2F1662942077146053%2F&show_text=0&width=560" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
           <p>Sådan her ser det ud, når 400 SFO-unger er samlet til actiondag i Ejby SFO.
           <br/><br/>
@@ -185,6 +214,8 @@
 
         <div class="text">
           <h4>25. maj 2018</h4>
+
+          <!-- <IFRAME> EMBEDDED FROM FACEBOOK -->
           <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fkoegekommune%2Fphotos%2Fa.645669545539983.1073741829.627851687321769%2F1659978400775754%2F%3Ftype%3D3&width=500" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
           <p>FRIVILLIGE I FOKUS
             <br/><br/>
@@ -200,6 +231,7 @@
             <div class="flere-opslag">Se flere Facebook-opslag</div>
         </div>
 
+        <!-- LINKS TO EXTERNAL WEBSITES -->
         <div class="hjemmesider">
           <br/>
           <br/>
