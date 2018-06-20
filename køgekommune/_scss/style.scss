@@ -10,7 +10,6 @@ html {
 }
 
 body {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
   width: 100%;
@@ -20,6 +19,7 @@ body {
 }
 
 .container {
+  // A GRID THAT MAKES IT EASIER TO PLACE THINGS ON THE WEBSITE
   display: grid;
 
   grid-template-areas:
@@ -28,6 +28,7 @@ body {
     "content"
     "footer";
 
+    //DEFINING THE SIZE OF THE GRID AREAS
     grid-template-columns: auto;
     grid-template-rows: 100px 40px auto auto;
 
